@@ -1,7 +1,7 @@
 package: wheely
 executable: wheely
 name: wheely
-version: 0.1.4
+version: 0.1.5
 summary: hi i'm wheely tool
 description: hi this is the wheelly tool and im a longer description
 license: MIT
@@ -11,8 +11,8 @@ project_urls:
 source: !WheelSource
   implementation: binary_wheel_builder.api.wheel_sources.GithubReleaseBinarySource
   project_slug: m5ka/wheely
-  version: "0.1.4"
-  tag_prefix: "v"
+  version: "0.1.5"
+  tag_prefix: ""
   binary_path: wheely
   asset_name_mapping:
     !WellknownPlatform MAC_SILICON: "wheely-darwin-arm64"
