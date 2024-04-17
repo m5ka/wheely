@@ -11,14 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    strategy:
-      matrix:
-        target:
-          - { goos: darwin, goarch: arm64 }
-          - { goos: darwin, goarch: amd64 }
-          - { goos: linux, goarch: amd64 }
-          - { goos: linux, goarch: arm }
-          - { goos: windows, goarch: amd64 }
     steps:
       - name: Checkout
         uses: actions/checkout@v4
