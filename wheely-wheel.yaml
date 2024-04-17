@@ -1,0 +1,28 @@
+package: wheely
+executable: wheely
+name: wheely
+version: 0.0.1
+summary: hi i'm wheely tool
+description: hi this is the wheelly tool and im a longer description
+license: MIT
+requires_python: ">=3.10"
+project_urls:
+  "Homepage": "https://github.com/m5ka/wheely"
+source: !WheelSource
+  implementation: binary_wheel_builder.api.wheel_sources.GithubReleaseBinarySource
+  project_slug: m5ka/wheely
+  version: "0.1.0"
+  tag_prefix: "v"
+  binary_path: wheely
+  asset_name_mapping:
+    !WellknownPlatform WINDOWS_x86_64: "wheely-windows-amd64.exe"
+    !WellknownPlatform MAC_SILICON: "wheely-darwin-arm64"
+    !WellknownPlatform MAC_INTEL: "wheely-darwin-amd64"
+    !WellknownPlatform LINUX_GENERIC_x84_64: "wheely-linux-amd64"
+    !WellknownPlatform LINUX_GENERIC_aarch64: "wheely-linux-arm64"
+platforms:
+  - !WellknownPlatform WINDOWS_x86_64
+  - !WellknownPlatform MAC_INTEL
+  - !WellknownPlatform MAC_SILICON
+  - !WellknownPlatform LINUX_GENERIC_x84_64
+  - !WellknownPlatform LINUX_GENERIC_aarch64
